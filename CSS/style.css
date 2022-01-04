@@ -266,8 +266,8 @@ img {
   left: 50%;
   transform: translate(-50%, -50%) scale(1);
 
-  min-width: 528px;
-  min-height: 581px;
+  width: 528px;
+  height: 581px;
   padding: 40px;
   border-radius: 4px;
 
@@ -305,7 +305,7 @@ img {
   /* margin-bottom: 12px; */
   font-size: 20px;
   line-height: 1.17;
-  letter-spacing: 0.06em;
+  /* letter-spacing: 0.06em; */
 }
 .form-field {
   position: relative;
@@ -392,7 +392,13 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
+
+  /* display: inline-block;
+  text-align: center;
+  vertical-align: center; */
+
   margin-bottom: 30px;
+  color: #757575;
 }
 .policy-link {
   text-decoration: underline;
@@ -400,6 +406,7 @@ img {
 }
 .policy {
   position: absolute;
+
   width: 1px;
   height: 1px;
   margin: -1px;
@@ -411,7 +418,6 @@ img {
   overflow: hidden;
 }
 .policy:checked + .policy-checkbox::before {
-  /* background-color: #2196f3; */
   border: 1px solid #2196f3;
   background-image: url(../images/icon\ check.svg);
   background-repeat: no-repeat;
@@ -421,13 +427,19 @@ img {
 
 .policy-checkbox::before {
   content: " ";
+  display: block;
 
   width: 16px;
   height: 15px;
-  border: 1px solid #212121;
-  border-radius: 2px;
+  /* border: 1px solid #212121;
+  border-radius: 2px; */
 
   margin-right: 7px;
+
+  background-image: url(../images/Vector\ checkbox.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 /* .button.submit {
@@ -487,6 +499,7 @@ textarea::placeholder {
   line-height: 1.88;
   padding: 10px 55px;
   cursor: pointer;
+  border: 1px solid #2196f3;
 
   min-width: 200px;
   min-height: 50px;
@@ -511,13 +524,6 @@ textarea::placeholder {
 .policy {
   display: inline-block;
 
-  border-bottom: 0.7px solid #2196f3;
-  line-height: 0.7;
-  margin-left: 2px;
-  margin-right: auto;
-  color: var(--accent-color); */
-/* line-height: 1.71; */
-/* } */
 .policy-check {
   display: flex;
   align-items: center;
@@ -953,7 +959,11 @@ textarea::placeholder {
   width: 358px;
   height: 50px;
   margin-right: 12px;
-  vertical-align: center;
+
+  padding-left: 16px;
+
+  font-size: 14px;
+  color: #c4c4c4;
 
   background-color: rgba(47, 48, 58, 1);
   border-radius: 4px;
@@ -971,7 +981,7 @@ textarea::placeholder {
   text-transform: uppercase;
   margin-bottom: 20px;
 }
-.subscription-line .form-input::placeholder {
+.form-input::placeholder {
   padding-left: 16px;
   padding-top: 15px;
   padding-bottom: 15px;
